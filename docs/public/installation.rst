@@ -72,16 +72,27 @@ If you have downloaded the latest release wheel files, you can install them dire
 
 To compile PyBUDA from source, follow these steps:
 
-* Step 1. Clone PyBUDA from https://github.com/tenstorrent/tt-buda/
+* Step 1. Install required tools and libraries
 
-* Step 2. Update submodules
+.. code-block:: bash
+
+  sudo apt-get install build-essential git git-lfs python3-dev cmake  \
+                       libyaml-cpp-dev libhwloc-dev libzmq3-dev       \
+                       libboost-graph-dev libboost-fiber-dev          \
+                       libboost-date-time-dev libboost-filesystem-dev \
+                       libboost-iostreams-dev libboost-timer-dev      \
+                       libboost-program-options-dev
+
+* Step 2. Clone PyBUDA from https://github.com/tenstorrent/tt-buda/
+
+* Step 3. Update submodules
 
 .. code-block:: bash
 
   cd tt-buda
   git submodule update --init --recursive
 
-* Step 3. Compile. PyBUDA's make system will automatically create the needed venv
+* Step 4. Compile. PyBUDA's make system will automatically create the needed venv
 
 .. code-block:: bash
 
